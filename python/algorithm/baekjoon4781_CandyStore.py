@@ -7,8 +7,9 @@ def get_calorie(money):
 
     for i in range(candies[0][1], money + 1):
         for cal, price in candies:
-            if i - price >= 0:
-                dp[i] = max(dp[i], cal + dp[i - price])
+            if i - price < 0:
+                break
+            dp[i] = max(dp[i], cal + dp[i - price])
 
     return dp[money]
 
