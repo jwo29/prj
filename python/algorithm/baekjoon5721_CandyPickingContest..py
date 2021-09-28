@@ -13,7 +13,6 @@ def one_line_max(arr, length):
 
     return dp[-1]
 
-
 while True:
     m, n = map(int, stdin.readline().split())
 
